@@ -4,14 +4,20 @@
     <title>Form data</title>
 </head>
 <body>
-<input type="text" name="first-name" id="first-name" placeholder="First Name" class="left-div-inputs">
-<input type="text" name="last-name" id="last-name" placeholder="Last Name" class="left-div-inputs">
-<input type="radio" name="gender" id="female">
-<label for="female">Female</label>
-<input type="radio" name="gender" id="male">
-<label for="male">Male</label>
+<form action="" method="post">
+<input type="text" name="name" placeholder="Name.." ><br>
+<input type="text" name="age" placeholder="Age.." ><br>
+<input type="radio" name="gender" value="male">
+<label for="female">Male</label><br>
+<input type="radio" name="female" value="female">
+<label for="male">Female</label><br>
 <input type="submit" value="Submit">
-
+</form>
+<?php
+if (isset($_POST['name'])) {
+    echo 'My name is '.$_POST['name'].'.'.' I am '.$_POST['age'].' old. '.'I am '.$_POST['gender'].'.';
+}
+?>
 </body>
 </html>
 <?php
